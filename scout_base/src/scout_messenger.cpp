@@ -214,7 +214,7 @@ namespace westonrobot
     status_publisher_.publish(status_msg);
     
     // publish Scout RC state message // EA
-    scout_msgs::ScoutRCStatus rc_msg;
+    scout_msgs::ScoutRCState rc_msg;
     
     rc_msg.swa = robot_state.rc_state.swa;
     rc_msg.swb = robot_state.rc_state.swb;
@@ -224,6 +224,7 @@ namespace westonrobot
     rc_msg.stick_right_h = robot_state.rc_state.stick_right_h;
     rc_msg.stick_left_v = robot_state.rc_state.stick_left_v;
     rc_msg.stick_left_h = robot_state.rc_state.stick_left_h;
+    rc_msg.var_a = robot_state.rc_state.var_a;
     
     rc_publisher_.publish(rc_msg);
 
